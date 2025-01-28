@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# client_randaf
-=======
 # Go API client for randaf
 
 RANDAF Event Exposure Service.  
@@ -162,4 +159,3 @@ Each of these functions takes a value of the given basic type and returns a poin
 
 
 
->>>>>>> master
