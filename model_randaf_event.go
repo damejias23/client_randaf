@@ -17,7 +17,7 @@ import (
 
 // RandafEvent Describes an event to be subscribed
 type RandafEvent struct {
-	Type RandafEventType `json:"type"`
+	Type RandafEventTypeAnyOf `json:"type"`
 	MaxReports *int32 `json:"maxReports,omitempty"`
 	// indicating a time in seconds.
 	MaxResponseTime *int32 `json:"maxResponseTime,omitempty"`
@@ -33,7 +33,7 @@ type RandafEvent struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRandafEvent(type_ RandafEventType) *RandafEvent {
+func NewRandafEvent(type_ RandafEventTypeAnyOf) *RandafEvent {
 	this := RandafEvent{}
 	this.Type = type_
 	return &this
@@ -48,9 +48,9 @@ func NewRandafEventWithDefaults() *RandafEvent {
 }
 
 // GetType returns the Type field value
-func (o *RandafEvent) GetType() RandafEventType {
+func (o *RandafEvent) GetType() RandafEventTypeAnyOf {
 	if o == nil {
-		var ret RandafEventType
+		var ret RandafEventTypeAnyOf
 		return ret
 	}
 
@@ -59,7 +59,7 @@ func (o *RandafEvent) GetType() RandafEventType {
 
 // GetTypeOk returns a tuple with the Type field value
 // and a boolean to check if the value has been set.
-func (o *RandafEvent) GetTypeOk() (*RandafEventType, bool) {
+func (o *RandafEvent) GetTypeOk() (*RandafEventTypeAnyOf, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -67,7 +67,7 @@ func (o *RandafEvent) GetTypeOk() (*RandafEventType, bool) {
 }
 
 // SetType sets field value
-func (o *RandafEvent) SetType(v RandafEventType) {
+func (o *RandafEvent) SetType(v RandafEventTypeAnyOf) {
 	o.Type = v
 }
 
