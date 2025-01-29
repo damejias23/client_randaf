@@ -17,7 +17,7 @@ import (
 
 // RandafEventReport Represents a report triggered by a subscribed event type
 type RandafEventReport struct {
-	Type RandafEventType `json:"type"`
+	Type RandafEventTypeAnyOf `json:"type"`
 	State RandafEventState `json:"state"`
 	// string with format 'date-time' as defined in OpenAPI.
 	TimeStamp time.Time `json:"timeStamp"`
@@ -31,7 +31,7 @@ type RandafEventReport struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRandafEventReport(type_ RandafEventType, state RandafEventState, timeStamp time.Time) *RandafEventReport {
+func NewRandafEventReport(type_ RandafEventTypeAnyOf, state RandafEventState, timeStamp time.Time) *RandafEventReport {
 	this := RandafEventReport{}
 	this.Type = type_
 	this.State = state
@@ -48,9 +48,9 @@ func NewRandafEventReportWithDefaults() *RandafEventReport {
 }
 
 // GetType returns the Type field value
-func (o *RandafEventReport) GetType() RandafEventType {
+func (o *RandafEventReport) GetType() RandafEventTypeAnyOf {
 	if o == nil {
-		var ret RandafEventType
+		var ret RandafEventTypeAnyOf
 		return ret
 	}
 
@@ -59,7 +59,7 @@ func (o *RandafEventReport) GetType() RandafEventType {
 
 // GetTypeOk returns a tuple with the Type field value
 // and a boolean to check if the value has been set.
-func (o *RandafEventReport) GetTypeOk() (*RandafEventType, bool) {
+func (o *RandafEventReport) GetTypeOk() (*RandafEventTypeAnyOf, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -67,7 +67,7 @@ func (o *RandafEventReport) GetTypeOk() (*RandafEventType, bool) {
 }
 
 // SetType sets field value
-func (o *RandafEventReport) SetType(v RandafEventType) {
+func (o *RandafEventReport) SetType(v RandafEventTypeAnyOf) {
 	o.Type = v
 }
 
