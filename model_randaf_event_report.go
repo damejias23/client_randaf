@@ -163,7 +163,8 @@ func (o *RandafEventReport) GetPhyRANLevelInfos() []PhyRANLevelInformation {
 // GetPhyRANLevelInfosOk returns a tuple with the PhyRANLevelInfos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RandafEventReport) GetPhyRANLevelInfosOk() ([]PhyRANLevelInformation, bool) {
-	if o == nil || o.PhyRANLevelInfos == nil {
+	// if o == nil || o.PhyRANLevelInfos == nil {
+		if o == nil  {
 		return nil, false
 	}
 	return o.PhyRANLevelInfos, true
